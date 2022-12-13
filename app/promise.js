@@ -22,6 +22,7 @@ Promise.all(urls.map((url) => fetch(url)))
     console.error(error);
   });
 
+// seperate example that uses await, no need for so many callbacks
 try {
   const responses = await Promise.all(urls.map((url) => fetch(url)));
   const datum = await Promise.all(responses.map((response) => response.json()));
